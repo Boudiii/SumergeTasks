@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+.container{
+  height: 100vh;
+  padding-top: 100px;
+  
+
+}
+.col{
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  height: 100px;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+}
+.col:last-child{
+  border-right: 0;
+}
+
+.row:last-child .col{
+  border-top: 1px solid black;
+}
+.row:nth-child(2) .col{
+  border-top: 0;
+}
+
+
+.col .cell.cross,.col .cell.c{
+  cursor: not-allowed;
+  display: block;
+}
+
+
+.col:hover .cell:not(.c):not(.cross){
+ display: block;
+ opacity: 10%;
+}
+
+
+.cell .circle{
+  margin-top: 24px;
+}
+:not(.x).hide,:not(.cross).hide{
+  display: none;
+}
+svg{
+  pointer-events: none;
+}
+.winning{
+  position: fixed;
+  top: 0;
+  bottom:0;
+  left:0;
+  right:0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}

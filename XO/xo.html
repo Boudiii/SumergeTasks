@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+  crossorigin="anonymous"
+/>
+<link href="xo.css" rel="stylesheet"/>
+  <title>Game</title>
+</head>
+<body>
+  
+  <div class="container-sm text-center container" id="cont">
+    <button type="button" class="btn btn-outline-dark mb-5" id="restart">Restart</button>
+
+    <div class="row justify-content-center">
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="0" >
+          <svg class = "x " xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide " xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="1">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="2">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+      </div>
+    </div>    
+    <div class="row justify-content-center">
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="3">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="4">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="5">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="6">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+
+      </div>
+      <div class="col col-lg-2"> 
+        <div class="cell hide  " data data-cell-index="7">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="col col-lg-2"> 
+        <div class="cell hide" data data-cell-index="8">
+          <svg class="x" xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+          <svg class="circle hide" xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="winning" id="won">
+    <p fs-4> YOU WON</p>
+
+  </div>
+</body>
+<script src="xo.js"></script>
+<script src="confetti.js"></script>
+</html>
