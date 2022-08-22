@@ -1,0 +1,21 @@
+.login{
+  background-image: url("https://cutewallpaper.org/21/movie-collage-wallpapers/Jack-Reacher,-Star-Wars,-Interstellar-movie-,-John-Wick-HD-.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.background-overlay{
+  background:rgba(36, 36, 35,0.8);
+  
+  
+}
+.login-overlay{
+  background:rgba(36, 36, 35,0.6);
+  /* box-shadow: rgb(47, 51, 55) 0px 20px 30px -10px; */
+  border-radius: 10%;
+  box-shadow: rgba(85, 93, 102, 0.3) 1px 0px 10px 5px;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px; */
+  /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+  
+}

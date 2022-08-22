@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.general-color{
+  color: #CFDBD5;;
+}
+*{
+  font-family: 'Kanit', sans-serif;
+  
+}
+.bold{
+  font-weight: 600;
+  font-size: 90px;
+  line-height:120px;
+  letter-spacing:-1px;
+  }
+  .light{
+    font-weight: 200;
+  }
+  

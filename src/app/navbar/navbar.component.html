@@ -1,0 +1,21 @@
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" [routerLink]="" style="color: #F5CB5C;">
+    <strong>S</strong>umergeDB
+    </a>
+    <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+    <div class="navbar-start">
+      <ng-template #disabledLink>
+        <a class="navbar-item" style="color: rgb(245, 203, 92); cursor: default;" (click) = "alert()" *ngIf="checkAuth()">Movies</a>
+      </ng-template>
+      <a class="navbar-item" style="color:#F5CB5C" *ngIf="!disable; else disabledLink" [routerLink]="['/popular_movies']">Movies</a>
+    </div>
+  </div>
+</nav>

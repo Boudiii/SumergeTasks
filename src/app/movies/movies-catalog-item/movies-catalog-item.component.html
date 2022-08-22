@@ -1,0 +1,21 @@
+<div class="card my-5 has-text-warning-light" >
+  <div class="card-content" [ngStyle]="setBackground()" (click)="onSelect()">
+    <div class="media" >
+      <div class="media-left">
+        <figure class="image is-60x60">
+          <img [src]="movie.logo_path" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-5 has-text-warning-light">{{movie.title}}</p>
+        <p class="subtitle is-7 has-text-warning-light">{{movie.release}}</p>
+        <p class="subtitle is-7 has-text-warning-light" style="margin-top:-0.75rem;">{{movie.genres}}</p>
+        <div class="content" style="overflow-y: scroll;">
+          {{movie.overview}}
+          <br>
+        </div>
+      </div>
+      
+    </div>
+</div>
+</div>

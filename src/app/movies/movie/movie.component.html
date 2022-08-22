@@ -1,0 +1,100 @@
+<div style="background-color: #242423;">
+
+  <section class="hero is-fullheight is-primary" [ngStyle]="setBackground()">
+    <div class="hero-body">
+      <div class="container is-fluid">
+    <!-- first row containing genre & runtime | rating -->
+    <div class="columns p-5" >
+        <div class="column is-full">
+          <div class="columns">
+            <div class="column is-7 title-in">
+              <div class="level light mb-0 ml-1" *ngFor="let genre of movie.genres">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p>{{genre['name']}}</p>
+                  </div>
+                  <div *ngIf="movie.genres.length > 1">
+                    <div class="level-item">
+                      <span class="vertical-line"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="bold" style="color: #CFDBD5;">{{movie.title}}</p>
+            </div>
+            <div class="column is-3 is-offset-3 light title-in">
+              <p>Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-footer">    
+    <div class="container has-text-centered bouncy-arrow">
+      <fa-icon (click)="scrollToElement(target)" class="fa-xl" [icon]="faArrow"></fa-icon>
+    </div>
+  </div>
+</section>
+<div class="container is-fluid mt-6" #target>
+  <div class="columns">
+    <div class="column is-4 is-offset-1 general">
+      <div class="container details corner" style="--c:#F5CB5C;--w:40px;--b:2px;padding: 20px;">
+        <p class="subtitle general">
+          Details
+        </p>
+        <div class="level">
+          <span class="level-item level-left">Release Date</span>
+          <span class="level-item level-right">{{movie.release}}</span>
+        </div>
+        <div class="level">
+          <span class="level-item level-left">Runtime</span>
+          <span class="level-item level-right">Runtime placeholder</span>
+        </div>
+        <div class="level">
+          <span class="level-item level-left">Director</span>
+          <span class="level-item level-right">{{movie.director}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="column is-4 is-offset-2 general">
+      <div class="container corner" style="--c:#F5CB5C;--w:40px;--b:2px;padding: 20px;">
+        <p class="subtitle general">
+          Storyline
+        </p>
+        <div class="content">
+          <p>{{movie.overview}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="columns">
+  <div class="column is-full mb-5"></div>
+</div>
+<div class="columns">
+  <div class="column is-full mb-4"></div>
+</div>
+  <div class="columns mt-6 is-centered">
+    <div class="column is-10 scrollable">
+      <div class="level">
+        <div class="level-item px-5" *ngFor="let cast of movie.credits">
+          <div class="tile is-vertical is-12" style="text-align: center;">
+            <figure style="align-self: center;">
+              <img class="img" [src]="cast.profile_img">
+            </figure>
+            <div>
+                <span class="subtitle general">{{cast.name}}</span>
+              </div>
+              <div>
+                <span class="light general">{{cast.role}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+</div>

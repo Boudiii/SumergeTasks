@@ -1,0 +1,16 @@
+.card {
+  height:220px;
+  box-shadow: 0px 5px 25px -5px  rgb(245, 203, 92);
+  transition: all 0.4s;
+}
+.card:hover{
+  box-shadow: 0px 0px 120px -55px  rgb(245, 203, 92);
+  transform: scale(1.02);
+  transition: all 0.4s;
+}
+.blur-back{
+  background: linear-gradient(to right,#0d0d0c 50%,transparent 100%);
+  height: 100%;
+  cursor:pointer;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,75 @@
+<div class="login">
+  <section class="hero is-fullheight background-overlay">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-5">
+            <div class="login-overlay">
+              <div class="columns is-centered">
+                <div class="column is-12 has-text-centered">
+                  <h1 class="title" style="color:#F5CB5C"><strong>S</strong><span class="light">umergemdb</span></h1>
+                </div>
+              </div>
+              <div class="columns is-centered">
+                <div class="column is-12 p-5">
+                  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                    <div class="field p-2">
+                      <div class="control has-icons-left">
+                        <input
+                          id="email"
+                          type="text"
+                          class="input"
+                          placeholder="example@mail.com"
+                          ngModel
+                          name="email"
+                          required
+                          email
+                          #email="ngModel"
+                        />
+
+                        <span
+                          class="is-size-7 has-text-danger"
+                          *ngIf="!email.valid && email.touched"
+                          >Please enter a valid email</span
+                        >
+
+                        <span class="icon is-small is-left">
+                          <fa-icon [icon]="faEnvelope"></fa-icon>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="field p-2">
+                      <p class="control has-icons-left">
+                        <input
+                          class="input"
+                          type="password"
+                          placeholder="Password"
+                          ngModel
+                          name="password"
+                          required
+                        />
+                        <span class="icon is-small is-left">
+                          <fa-icon [icon]="faLock"></fa-icon>
+                        </span>
+                      </p>
+                    </div>
+                    <div class="field is-grouped is-grouped-centered">
+                      <div class="control">
+                        <button
+                          class="button general-color"
+                          [disabled]="!f.valid"
+                        >
+                          <span style="color: rgba(36, 36, 35)">Submit</span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
