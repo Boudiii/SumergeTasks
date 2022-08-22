@@ -15,16 +15,21 @@ export class MoviesCatalogItemComponent implements OnInit {
   ngOnInit(): void {
   }
   setBackground() {
-    return {
-      "background-image": "linear-gradient(to right, #0d0d0c 50%, transparent 100%),url('" + this.movie.poster_path + "')",
-      "height": "100%",
-      "cursor": "pointer",
-      "background-size": "contain",
-      "background-position": "right",
-      "background-repeat":"no-repeat"
-      
+    if (this.movie !== undefined) {
+      return {
+        "background-image": "linear-gradient(to right, #0d0d0c 50%, transparent 100%),url('" + this.movie.poster_path + "')",
+        "height": "100%",
+        "cursor": "pointer",
+        "background-size": "contain",
+        "background-position": "right",
+        "background-repeat": "no-repeat",
+        "overflow-y":"scroll"
+        
+      }
     }
-  };
+    return {};
+  }
+  
 
   onSelect() {
     this.movieService.movieSelected.emit(this.movie);

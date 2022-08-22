@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from '../movies.model';
 
@@ -21,7 +22,7 @@ export class MoviesCatalogComponent implements OnInit {
       screenReaderCurrentLabel: `You're on page`
   };
   movies: Movie[] = [];
-  constructor(private movieService: MovieService) { 
+  constructor(private movieService: MovieService,private auth:AuthenticateService) { 
     
   }
   config = {
@@ -31,7 +32,7 @@ export class MoviesCatalogComponent implements OnInit {
     totalItems: 10224
   };
   
-   ngOnInit(): void  {
+  ngOnInit(): void  {
     this.movies =  this.movieService.getMovies(this.config.currentPage);
     
   }

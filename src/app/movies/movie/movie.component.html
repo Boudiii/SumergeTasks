@@ -7,8 +7,8 @@
     <div class="columns p-5" >
         <div class="column is-full">
           <div class="columns">
-            <div class="column is-7 title-in">
-              <div class="level light mb-0 ml-1" *ngFor="let genre of movie.genres">
+            <div class="column is-7 title-in" *ngIf="movie">
+              <div class="level light mb-0 ml-1"  *ngFor="let genre of movie.genres">
                 <div class="level-left">
                   <div class="level-item">
                     <p>{{genre['name']}}</p>
@@ -20,7 +20,7 @@
                   </div>
                 </div>
               </div>
-              <p class="bold" style="color: #CFDBD5;">{{movie.title}}</p>
+              <p class="bold" style="color: #CFDBD5;" *ngIf="movie">{{movie.title}}</p>
             </div>
             <div class="column is-3 is-offset-3 light title-in">
               <p>Rating</p>
@@ -45,15 +45,15 @@
         </p>
         <div class="level">
           <span class="level-item level-left">Release Date</span>
-          <span class="level-item level-right">{{movie.release}}</span>
+          <span class="level-item level-right" *ngIf="movie">{{movie.release}}</span>
         </div>
         <div class="level">
           <span class="level-item level-left">Runtime</span>
-          <span class="level-item level-right">Runtime placeholder</span>
+          <span class="level-item level-right" *ngIf="movie">100 mins</span>
         </div>
         <div class="level">
           <span class="level-item level-left">Director</span>
-          <span class="level-item level-right">{{movie.director}}</span>
+          <span class="level-item level-right" *ngIf="movie">{{movie.director}}</span>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
         <p class="subtitle general">
           Storyline
         </p>
-        <div class="content">
+        <div class="content" *ngIf="movie">
           <p>{{movie.overview}}</p>
         </div>
       </div>
@@ -76,7 +76,7 @@
 </div>
   <div class="columns mt-6 is-centered">
     <div class="column is-10 scrollable">
-      <div class="level">
+      <div class="level" *ngIf="movie">
         <div class="level-item px-5" *ngFor="let cast of movie.credits">
           <div class="tile is-vertical is-12" style="text-align: center;">
             <figure style="align-self: center;">

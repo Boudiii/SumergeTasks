@@ -15,12 +15,14 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   alert() {
-    
     alert("Log in!")
   }
-  checkAuth():boolean {
+  checkAuth(): boolean {
     if (this.auth.loggedIn)
       this.disable = false;
+    else {
+      this.disable = true;
+    }
     return this.disable;
     
     

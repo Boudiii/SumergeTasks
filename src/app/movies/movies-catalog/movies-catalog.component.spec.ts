@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { MoviesCatalogComponent } from './movies-catalog.component';
 
@@ -8,6 +10,10 @@ describe('MoviesCatalogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        HttpClientTestingModule,
+        NgxPaginationModule
+      ],
       declarations: [ MoviesCatalogComponent ]
     })
     .compileComponents();
@@ -17,7 +23,9 @@ describe('MoviesCatalogComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the app', () => {
+    let fixture = TestBed.createComponent(MoviesCatalogComponent);
+    let app = fixture.debugElement.componentInstance
+    expect(app).toBeTruthy();
   });
 });

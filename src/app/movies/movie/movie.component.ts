@@ -18,6 +18,7 @@ export class MovieComponent implements OnInit {
     const state = navigation?.extras.state as {
       movie:Movie
     };
+    if(state !== undefined)
     this.movie = state.movie;
   }
 
@@ -26,14 +27,18 @@ export class MovieComponent implements OnInit {
     
   }
 
-  setBackground= () => {
-    return {
-      "background-image": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + this.movie.poster_path + "')",
-      "background-position": "center",
-      "background-repeat": "no-repeat",
-      "position": "relative",
-      "background-size":"cover"
+  setBackground = () => {
+    if (this.movie) {
+      
+      return {
+        "background-image": "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('" + this.movie.poster_path + "')",
+        "background-position": "center",
+        "background-repeat": "no-repeat",
+        "position": "relative",
+        "background-size":"cover"
+      }
     }
+    return {}
   }
   scrollToElement($element:any): void {
     console.log($element);

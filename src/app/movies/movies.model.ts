@@ -3,7 +3,7 @@ export class Movie {
   public title: string;
   public overview: string;
   public genres: any[];
-  public poster_path: string;
+  public poster_path: any;
   public logo_path: any;
   public release: number;
   public id: any;

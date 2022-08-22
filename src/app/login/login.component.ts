@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NavigationExtras, Router } from '@angular/router';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import { AuthenticateService } from '../services/authenticate.service';
 
 @Component({
   selector: 'app-login',
@@ -11,9 +12,10 @@ import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 export class LoginComponent implements OnInit {
   faEnvelope = faEnvelope;
   faLock = faLock;
-  constructor(private router:Router) { }
+  constructor(private router:Router,private auth:AuthenticateService) { }
 
   ngOnInit(): void {
+    this.auth.loggedIn = false;
   }
   onSubmit(form:NgForm) {
     console.log(form.value);
@@ -24,6 +26,7 @@ export class LoginComponent implements OnInit {
       }
     };
     console.log(navigationExtras);
+    this.auth.authenticate(form.value.email, form.value.password);
     this.router.navigate(['/', 'popular_movies'], navigationExtras);
   }
 }
